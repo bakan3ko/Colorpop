@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <script src="js/jquery-3.1.1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>
+</head>
+
+<body>
+    <main>
+        <section id="mainMenu">
+          <img class="logo" src="img/logo.png" alt="colorpop">
+          <div class="menuWrap">
+            <button class="btnPlay">play</button>
+            <button class="btnRules">rules</button>
+            <button class="btnGameOver">game over</button>
+          </div>
+          <p class="copyrights"></p>
+        </section>
+
+        <section id="playGame">
+          <nav>
+            <div class="navSections">
+              <h2 class="score">0</h2>
+              <h3>score</h3>
+            </div>
+            <div class="navSections">
+              <h2 class="timer">0</h2>
+              <h3>timer</h3>
+            </div>
+            <div class="navSections">
+              <div class="mainColor"></div>
+            </div>
+          </nav>
+          <div class="circleWrap">
+            <div class="circleBundle">
+              <div class="circle gameColor0"></div>
+              <div class="circle gameColor1"></div>
+              <div class="circle gameColor2"></div>
+              <div class="circle gameColor3"></div>
+              <div class="circle gameColor4"></div>
+              <div class="circle gameColor5"></div>
+              <div class="circle gameColor6"></div>
+              <div class="circle gameColor7"></div>
+              <div class="circle gameColor8"></div>
+            </div>
+          </div>
+          <button class="btnQuit">quit</button>
+        </section>
+        <section id="gameRules">
+          <h1>rules</h1>
+          <ul>
+            <li>Tap the right color on the screen</li>
+            <li>For each correct color, you'll get a point on your score and you'll increase your timer</li>
+            <li>Get as much points as you can get before the timer runs out</li>
+            <li>Enjoy!</li>
+          </ul>
+          <button class="btnMenu">menu</button>
+        </section>
+        <section id="gameOver">
+          <h1>you suck</h1>
+          <h2>score: <span class="finalScore">0</span></h2>
+          <h2>top score: <span class="topScore">0</span></h2>
+          <div class="menuWrap">
+            <button class="btnPlayAgain">play again</button>
+            <button class="btnMenuOver">menu</button>
+          </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
