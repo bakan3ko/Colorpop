@@ -50,6 +50,37 @@ section {
   opacity: 0;
 }
 
+.splashScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/bg_dots.png');
+    background-size: cover;
+    background-color: #fff;
+}
+.splashScreen .logo {
+  background-image: url(../img/nyankuIcon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 17%;
+  padding-bottom: 13%;
+  margin-bottom: 10px;
+}
+.splashScreen .textLogo {
+  background-image: url('../img/nyanku.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33%;
+  padding-bottom: 7%;
+}
+
 #mainMenu {
   display: flex;
   opacity: 1;
@@ -63,25 +94,28 @@ section {
 
 .copyrights {
   width: 100%;
-  padding: 14px;
-  color: #cccccc;
+  padding: 27px;
+  color: rgba(144,144,144,1);
   font-size: 1em;
   text-align: center;
   position: absolute;
   bottom: 0;
   left: 0;
+  letter-spacing: 1px;
 }
 
 button {
   width: 100%;
   padding: 20px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.83);
-  border: 1px solid rgba(144,144,144,0.3);
-  border-radius: 100px;
-  color: #cccccc;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(144,144,144,0.2);
+  border-radius: 10px;
+  color: rgba(144,144,144,0.5);
   font-size: 1em;
   cursor: pointer; /*for web*/
+  letter-spacing: 1px;
+
 }
 
 button:focus {
@@ -99,10 +133,15 @@ button:focus {
   margin: 0;
 }
 
+.icon {
+  width: 17%;
+  margin-bottom: 10px;
+  margin-top: -40px;
+}
+
 .logo {
-  width: 37%;
+  width: 30%;
   margin-bottom: 30px;
-  margin-top: -50px;
 }
 
 .bgCircles {
