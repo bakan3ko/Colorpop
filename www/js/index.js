@@ -304,7 +304,7 @@ $('.scoreShare').click(function(){
 
 //////////////// Share end //////////////////
 
-  $(document).on('click', ".rightColor", function() {
+  $(document).on('touchstart', ".rightColor", function() {
     playSound('click.aac');
     addScore();
     addTimer();
@@ -312,12 +312,12 @@ $('.scoreShare').click(function(){
     gameCircles();
   });
 
-  $(document).on('click', ".wrongColor", function() {
+  $(document).on('touchstart', ".wrongColor", function() {
     endGame();
     goTo('#playGame','#gameOver');
   });
 
-  $(document).on('click', ".musicOff", function() {
+  $(document).on('touchstart', ".musicOff", function() {
     audio.pause();
     $(this).removeClass('musicIconOn');
     $(this).removeClass('musicOff');
@@ -325,7 +325,7 @@ $('.scoreShare').click(function(){
     $(this).addClass('musicOn');
   });
 
-  $(document).on('click', ".musicOn", function() {
+  $(document).on('touchstart', ".musicOn", function() {
     audio.play();
     $(this).removeClass('musicIconOff');
     $(this).removeClass('musicOn');
@@ -333,39 +333,39 @@ $('.scoreShare').click(function(){
     $(this).addClass('musicOff');
   });
 
-  $('.btnPlay').click(function(){
+  $('.btnPlay').on('touchstart', function(){
     goTo('#mainMenu', '#playGame');
     clearTimeout(bgCircleInterval);
     startGame();
   });
 
-  $('.btnPlayAgain').click(function(){
+  $('.btnPlayAgain').on('touchstart', function(){
     goTo('#gameOver', '#playGame');
     startGame();
   });
 
-  $('.btnMenuOver').click(function(){
+  $('.btnMenuOver').on('touchstart', function(){
     goTo('#gameOver', '#mainMenu');
     bgSpawnCircles();
   });
 
-  $('.btnRules').click(function(){
+  $('.btnRules').on('touchstart', function(){
     goTo('#mainMenu', '#gameRules');
     clearTimeout(bgCircleInterval);
   });
 
-  $('.btnGameOver').click(function(){
+  $('.btnGameOver').on('touchstart', function(){
     goTo('#mainMenu', '#gameOver');
     clearTimeout(bgCircleInterval);
   });
 
-  $('.btnQuit').click(function(){
+  $('.btnQuit').on('touchstart', function(){
     endGame();
     bgSpawnCircles();
     goTo('#playGame', '#mainMenu');
   });
 
-  $('.btnMenu').click(function(){
+  $('.btnMenu').on('touchstart', function(){
     bgSpawnCircles();
     goTo('#gameRules', '#mainMenu');
   });
