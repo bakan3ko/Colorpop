@@ -81,6 +81,42 @@ section {
   padding-bottom: 7%;
 }
 
+.menuIcons {
+  width: 6%;
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  z-index: 9999;
+}
+
+.shareIcon {
+  background-image: url('../img/share.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 90%;
+  margin-bottom: 90%;
+  opacity: 0.7;
+}
+
+.musicIconOn {
+  background-image: url('../img/music.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 90%;
+  opacity: 0.7;
+}
+
+.musicIconOff {
+  background-image: url('../img/musicOff.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-bottom: 90%;
+  opacity: 0.7;
+}
+
 #mainMenu {
   display: flex;
   opacity: 1;

@@ -264,7 +264,7 @@ $('.gameShare').click(function(){
     message: 'Think your fast? Well think again! Play ColorPop now! #teamNyanku', // not supported on some apps (Facebook, Instagram)
     subject: 'ColorPop: Mobile Game', // fi. for email
     files: ['../img/icon.png'], // an array of filenames either locally or remotely
-    url: 'https://play.google.com/store/apps/details?id=com.phonegap.colorpop',
+    url: 'https://play.google.com/store/apps/details?id=com.nyanku.colorpop',
     chooserTitle: 'ColorPop' // Android only, you can override the default share sheet title
   }
 
@@ -286,7 +286,7 @@ $('.scoreShare').click(function(){
     message: 'I got a top score of ' + topScore + ' in ColorPop. Can you beat that? #teamNyanku', // not supported on some apps (Facebook, Instagram)
     subject: 'ColorPop: Top Score', // fi. for email
     files: ['../img/icon.png'], // an array of filenames either locally or remotely
-    url: 'https://play.google.com/store/apps/details?id=com.phonegap.colorpop',
+    url: 'https://play.google.com/store/apps/details?id=com.nyanku.colorpop',
     chooserTitle: 'ColorPop' // Android only, you can override the default share sheet title
   }
 
@@ -315,6 +315,22 @@ $('.scoreShare').click(function(){
   $(document).on('click', ".wrongColor", function() {
     endGame();
     goTo('#playGame','#gameOver');
+  });
+
+  $(document).on('click', ".musicOff", function() {
+    audio.pause();
+    $(this).removeClass('musicIconOn');
+    $(this).removeClass('musicOff');
+    $(this).addClass('musicIconOff');
+    $(this).addClass('musicOn');
+  });
+
+  $(document).on('click', ".musicOn", function() {
+    audio.play();
+    $(this).removeClass('musicIconOff');
+    $(this).removeClass('musicOn');
+    $(this).addClass('musicIconOn');
+    $(this).addClass('musicOff');
   });
 
   $('.btnPlay').click(function(){
