@@ -15,6 +15,7 @@ $(function(){
   timer = 22;
   clock = 1000; //decrease timer every second
   adCount = 0;
+  // prepareInterstitialAd();
 
   bgColorPalette = shuffle(colorPalette);
 
@@ -114,9 +115,11 @@ $(function(){
 
     adCount++;
 
-    if(adCount % 3 == 0){
-      showInterstitialAd();
-    }
+    // if(adCount % 3 == 0){
+    //   showInterstitialAd();
+    // } else if(adCount % 3 == 1){
+    //   prepareInterstitialAd();
+    // }
 
     clearTimeout(timerInterval);
     $('.finalScore').text(score);
